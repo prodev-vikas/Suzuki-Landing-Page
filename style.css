@@ -197,3 +197,26 @@ header {
   font-weight: 400;
   font-style: italic;
 }
+
+/*responsive design*/
+
+@media (max-width:991px){
+  .main{
+    padding: 40px;
+  }
+
+  header{
+    padding: 20px 40px;
+  }
+
+  .footer{
+    padding: 20px 40px;
+
+  }
+
+  .slider{
+    position: relative;
+    width: 100%;
+  }
+  .slider .slide
+}
