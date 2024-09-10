@@ -67,7 +67,7 @@ header {
   text-decoration: none;
   color: var(--white);
   margin-left: 40px;
-  transition: 0.25s;
+  transition: 0.35s;
 }
 
 .navigation li a:hover {
@@ -104,7 +104,7 @@ header {
   margin-top: 20px;
   border-radius: 50px;
   font-size: 1.5rem;
-  transition: 0.25s;
+  transition: 0.35s;
 }
 
 .btn:hover {
@@ -172,7 +172,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 100px;
-  transition: 0.25s;
+  transition: 0.35s;
   opacity: 0;
   pointer-events: none;
 }
@@ -217,6 +217,91 @@ header {
   .slider{
     position: relative;
     width: 100%;
+    height: 180px;
   }
-  .slider .slide
+  .slider .slide{
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider .slide h2{
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .slider .slide h2:last-child{
+    text-align: center;
+  }
+
+  .bike{
+    width: 100%;
+  }
+  .footer{
+    position: relative;
+    margin-top: 50%;
+    flex-direction: column-reverse;
+    padding: 20px 40px;
+  }
+
+  .sci{
+    margin-top: 4opx;
+  }
+
+  .content h2{
+    font-size: 3em;
+  }
+
+  .toggle{
+    position: relative;
+    width: 32px;
+    height: 40px;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 10px  0 var(--white);
+
+
+  }
+  .toggle.active::before{
+    transform: translateY(0)  rotate(45deg);
+    box-shadow: 0 0 0 var(--white);
+
+  }
+  .toggle.active::after{
+    transform: translateY(0)  rotate(-45deg);
+
+  }
+
+  .toggle::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    transform: translateY(10px);
+    transition: 0.3s;
+
+
+  }
+
+  .navigation{
+    display: none;
+  }
+
 }
