@@ -113,6 +113,7 @@ header {
 
 .bike {
   max-width: 80%;
+  margin-top: 30%;
 }
 
 .footer {
@@ -200,26 +201,25 @@ header {
 
 /*responsive design*/
 
-@media (max-width:991px){
-  .main{
+@media (max-width: 991px) {
+  .main {
     padding: 40px;
   }
 
-  header{
+  header {
     padding: 20px 40px;
   }
 
-  .footer{
+  .footer {
     padding: 20px 40px;
-
   }
 
-  .slider{
+  .slider {
     position: relative;
     width: 100%;
     height: 180px;
   }
-  .slider .slide{
+  .slider .slide {
     position: absolute;
     top: 50%;
     padding: 0;
@@ -228,33 +228,34 @@ header {
     align-items: center;
   }
 
-  .slider .slide h2{
+  .slider .slide h2 {
     font-size: 2.5em;
     text-align: center;
   }
-  .slider .slide h2:last-child{
+  .slider .slide h2:last-child {
     text-align: center;
   }
 
-  .bike{
+  .bike {
     width: 100%;
   }
-  .footer{
+  .footer {
     position: relative;
-    margin-top: 50%;
+    margin-top: 10%;
     flex-direction: column-reverse;
     padding: 20px 40px;
   }
 
-  .sci{
-    margin-top: 4opx;
+  .sci {
+    margin-top: 40px;
+    margin-left: 30px;
   }
 
-  .content h2{
+  .content h2 {
     font-size: 3em;
   }
 
-  .toggle{
+  .toggle {
     position: relative;
     width: 32px;
     height: 40px;
@@ -266,42 +267,61 @@ header {
     cursor: pointer;
   }
 
-  .toggle::before{
-    content: '';
+  .toggle::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
     background: var(--white);
     transform: translateY(-10px);
     transition: 0.3s;
-    box-shadow: 0 10px  0 var(--white);
-
-
+    box-shadow: 0 10px 0 var(--white);
   }
-  .toggle.active::before{
-    transform: translateY(0)  rotate(45deg);
+  .toggle.active::before {
+    transform: translateY(0) rotate(45deg);
     box-shadow: 0 0 0 var(--white);
-
   }
-  .toggle.active::after{
-    transform: translateY(0)  rotate(-45deg);
-
+  .toggle.active::after {
+    transform: translateY(0) rotate(-45deg);
   }
 
-  .toggle::after{
-    content: '';
+  .toggle.after{
+    position: fixed;
+    top: 30px;
+    right: 40px;
+  }
+
+  .toggle::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
     background: var(--white);
     transform: translateY(10px);
     transition: 0.3s;
-
-
   }
 
-  .navigation{
+  .navigation {
     display: none;
   }
 
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    background: var(--black);
+  }
+
+  .navigation li a{
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+  }
 }
